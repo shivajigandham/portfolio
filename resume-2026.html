@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivaji Gandham - Resume 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0c;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --accent-primary: #3b82f6;
+            --accent-secondary: #06b6d4;
+            --accent-success: #10b981;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 4rem 2rem;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; }
+
+        header { text-align: center; margin-bottom: 4rem; }
+        .name {
+            font-size: 3.5rem; font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .role {
+            font-size: 1.2rem; color: var(--accent-secondary);
+            text-transform: uppercase; letter-spacing: 0.15em; font-weight: 600;
+        }
+
+        .glass {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;
+            display: flex; align-items: center; gap: 0.75rem;
+            border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;
+        }
+        .skill-tag {
+            display: inline-block; background: rgba(255,255,255,0.05);
+            padding: 0.4rem 0.8rem; border-radius: 6px; margin: 0.2rem;
+            font-size: 0.85rem; border: 1px solid var(--card-border);
+        }
+
+        .project-terminal {
+            background: #1e1e20; border-radius: 8px; padding: 1rem;
+            font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; margin-top: 1rem;
+        }
+        .command { color: #f8f8f2; }
+        .output { color: #50fa7b; }
+
+        .timeline-item { margin-bottom: 2rem; }
+        .timeline-date { color: var(--accent-secondary); font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem; }
+        .timeline-title { font-size: 1.2rem; font-weight: 700; }
+        ul { list-style: none; margin-top: 0.5rem; }
+        li { position: relative; padding-left: 1.2rem; color: var(--text-secondary); margin-bottom: 0.4rem; }
+        li::before { content: '→'; position: absolute; left: 0; color: var(--accent-success); }
+
+        a { color: var(--text-secondary); text-decoration: none; transition: 0.2s; margin: 0 1rem; }
+        a:hover { color: var(--accent-primary); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="name">Shivaji Gandham</h1>
+            <p class="role">Security-First Automation Engineer</p>
+            <div style="margin-top: 1.5rem;">
+                <a href="mailto:shivaji.gandham@gmail.com">shivaji.gandham@gmail.com</a>
+                <a href="https://linkedin.com/in/shivaji-gandham-00b8a121b/">LinkedIn</a>
+                <a href="https://github.com/shivajigandham">GitHub</a>
+            </div>
+        </header>
+
+        <div class="glass">
+            <p style="color: var(--text-secondary); text-align: center; font-size: 1.1rem;">
+                Detail-oriented professional specializing in <b>System Administration</b>, <b>Web Security</b>, and <b>Cloud Infrastructure</b>. 
+                Expert in building robust, automated testing frameworks with a security-first approach. 
+                AWS Certified Solutions Architect & CEH.
+            </p>
+        </div>
+
+        <h2 class="section-title">Technical Domain Skills</h2>
+        <div class="skills-grid">
+            <div class="glass">
+                <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Security & QA</h3>
+                <span class="skill-tag">Selenium</span> <span class="skill-tag">Playwright</span>
+                <span class="skill-tag">Pytest</span> <span class="skill-tag">OWASP</span>
+                <span class="skill-tag">CEH</span> <span class="skill-tag">Vulnerability Audit</span>
+            </div>
+            <div class="glass">
+                <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Infrastructure</h3>
+                <span class="skill-tag">AWS Architect</span> <span class="skill-tag">Linux Admin</span>
+                <span class="skill-tag">Docker</span> <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">GitHub Actions</span> <span class="skill-tag">Azure</span>
+            </div>
+        </div>
+
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="glass">
+            <h3 class="timeline-title">Advanced Multi-Threaded Port Scanner (C++)</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">
+                High-performance network tool with banner grabbing and service fingerprinting.
+            </p>
+            <div class="project-terminal">
+                <div class="command">$ ./scanner --target 127.0.0.1</div>
+                <div class="output">Scanning 1024 ports...</div>
+                <div class="output">Port 135 [OPEN] - RPC</div>
+                <div class="output">Port 445 [OPEN] - Microsoft-DS</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline-item">
+            <p class="timeline-date">JAN 2024 – PRESENT</p>
+            <h3 class="timeline-title">System Administrator & Security Researcher</h3>
+            <ul>
+                <li>Automated routine system tasks using Python/Bash, reducing manual workload by 40%.</li>
+                <li>Managed secured Linux/Windows server environments with 99.9% uptime.</li>
+                <li>Designed secure cloud architectures on AWS using VPCs and IAM.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">Certifications</h2>
+        <div class="skills-grid" style="text-align: center;">
+            <div class="glass"><b>Certified Ethical Hacker</b><br><span style="color: var(--accent-secondary)">EC-Council</span></div>
+            <div class="glass"><b>AWS Solutions Architect</b><br><span style="color: var(--accent-secondary)">Associate</span></div>
+            <div class="glass"><b>CompTIA Linux+</b><br><span style="color: var(--accent-secondary)">LPI</span></div>
+        </div>
+    </div>
+</body>
+</html>
